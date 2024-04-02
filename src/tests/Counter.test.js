@@ -9,19 +9,19 @@ beforeEach(() => {
   render(<Counter />);
 });
 
-test("renders counter message", () => {
+test('renders counter message', () => {
   // Complete the unit test below based on the objective in the line above
   const message = screen.getByText("Counter");
   expect(message).toBeInTheDocument();
 });
 
-test("should render initial count with value of 0", () => {
+test('should render initial count with value of 0', () => {
   // Complete the unit test below based on the objective in the line above
   const count1 = screen.getByTestId("count");
   expect(count1).toHaveTextContent("0");
 });
 
-test("clicking + increments the count", () => {
+test('clicking + increments the count', () => {
   // Complete the unit test below based on the objective in the line above
   const button1 = screen.getByText("+");
   const countDisplay = screen.getByTestId("count");
@@ -31,7 +31,7 @@ test("clicking + increments the count", () => {
   expect(countDisplay).toHaveTextContent("2");
 });
 
-test("clicking - decrements the count", () => {
+test('clicking - decrements the count', () => {
   // Complete the unit test below based on the objective in the line above
   const button2 = screen.getByText("-");
   const countDisplay = screen.getByTestId("count");
